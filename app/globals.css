@@ -2,25 +2,118 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #101249;
+  --astikan-red: #e7354c;
+  --astikan-blue: #0b1d5c;
+  --astikan-violet: #7b2bbd;
+  --astikan-ink: #090b2d;
+  --astikan-soft: #f7f6ff;
+  --astikan-blush: #fff0f3;
+  --astikan-muted: #606783;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-astikan-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+  scroll-padding-top: 96px;
 }
 
 body {
+  margin: 0;
+  min-height: 100vh;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+body::selection {
+  background: rgba(231, 53, 76, 0.22);
+  color: var(--astikan-ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Modern Astikan polish */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f6ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #e7354c, #7b2bbd, #0b1d5c);
+  border-radius: 999px;
+  border: 2px solid #f7f6ff;
+}
+
+@keyframes astikan-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes astikan-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.astikan-gradient-motion {
+  background-size: 220% 220%;
+  animation: astikan-gradient 9s ease infinite;
+}
+
+.astikan-float {
+  animation: astikan-float 5s ease-in-out infinite;
+}
+
+@media (max-width: 640px) {
+  .aos-init,
+  .aos-animate {
+    transition-delay: 0ms !important;
+  }
 }

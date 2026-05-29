@@ -1,0 +1,35 @@
+<svg width="720" height="680" viewBox="0 0 720 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="84" y1="76" x2="621" y2="608" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EFE7FF"/>
+      <stop offset="0.52" stop-color="#FAF7FF"/>
+      <stop offset="1" stop-color="#FFE9EF"/>
+    </linearGradient>
+    <linearGradient id="s" x1="149" y1="607" x2="551" y2="607" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7B2BBD"/>
+      <stop offset="1" stop-color="#E7354C"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="680" rx="40" fill="url(#g)"/>
+  <circle cx="478" cy="214" r="178" fill="#7B2BBD" fill-opacity="0.13"/>
+  <circle cx="203" cy="349" r="102" fill="#E7354C" fill-opacity="0.08"/>
+  <path d="M176 603C202 476 242 408 331 385C436 358 528 431 552 603H176Z" fill="white" stroke="#DDE3F4" stroke-width="4"/>
+  <path d="M273 425L331 399L390 426L362 613H302L273 425Z" fill="#F8FBFF"/>
+  <path d="M317 396H350V445C350 459 338 471 323 471C308 471 296 459 296 445V404C302 401 309 398 317 396Z" fill="#F2B9A9"/>
+  <path d="M278 242C278 176 323 137 371 137C419 137 463 176 463 242V311C463 372 425 421 371 421C316 421 278 372 278 311V242Z" fill="#FFC9BA"/>
+  <path d="M260 246C262 160 314 111 374 111C442 111 486 164 487 253C455 229 395 203 314 217C293 220 276 232 260 246Z" fill="#1E2147"/>
+  <path d="M278 258C253 252 242 273 251 298C257 315 270 323 282 320L278 258Z" fill="#FFC9BA"/>
+  <path d="M462 258C487 252 498 273 489 298C483 315 470 323 458 320L462 258Z" fill="#FFC9BA"/>
+  <circle cx="336" cy="288" r="7" fill="#1A1D40"/>
+  <circle cx="410" cy="288" r="7" fill="#1A1D40"/>
+  <path d="M353 347C366 360 386 360 399 347" stroke="#A25462" stroke-width="5" stroke-linecap="round"/>
+  <path d="M273 425C223 444 199 498 186 603H264L273 425Z" fill="#EDF5FF"/>
+  <path d="M390 426C442 446 514 498 535 603H457L390 426Z" fill="#EDF5FF"/>
+  <path d="M301 439L284 538L322 603" stroke="#CFD8EF" stroke-width="4"/>
+  <path d="M388 439L408 538L368 603" stroke="#CFD8EF" stroke-width="4"/>
+  <circle cx="286" cy="515" r="13" fill="#7B2BBD"/>
+  <path d="M410 449C459 461 482 496 487 538" stroke="#101249" stroke-width="11" stroke-linecap="round"/>
+  <circle cx="490" cy="553" r="20" fill="#101249"/>
+  <circle cx="490" cy="553" r="10" fill="#F7F6FF"/>
+  <ellipse cx="360" cy="626" rx="211" ry="28" fill="url(#s)" fill-opacity="0.14"/>
+</svg>
