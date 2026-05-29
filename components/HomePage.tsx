@@ -165,15 +165,16 @@ function HomeHero() {
   return (
     <section className="relative overflow-hidden border-b border-[#171550]/8 bg-[linear-gradient(135deg,#ffffff_0%,#fcf9ff_52%,#fff7fa_100%)] pt-20">
       <div className="absolute left-[45%] top-20 hidden h-[420px] w-[420px] rounded-full bg-[#8b35d1]/10 blur-3xl md:block" />
+      <Image src="/home/hero-doctor-approved.png" alt="Astikan doctor consultation support" width={462} height={596} priority className="pointer-events-none absolute right-[-30px] top-[112px] z-0 h-[250px] w-[190px] object-contain object-bottom opacity-95 md:hidden" />
       <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-9 sm:px-6 md:grid-cols-[0.95fr_0.92fr] lg:grid-cols-[0.92fr_0.9fr_0.68fr] lg:px-8 lg:py-16">
         <div className="relative z-10">
           <div className="gsap-hero-kicker inline-flex items-center gap-2 rounded-full bg-[#f5edff] px-4 py-2 text-xs font-black text-[#7133be] shadow-sm">
             <FaShieldAlt className="text-[#7133be]" /> Trusted by thousands of families in India
           </div>
-          <h1 className="gsap-hero-title mt-5 max-w-xl text-balance text-4xl font-black leading-[1.04] tracking-[-0.065em] text-[#101249] sm:text-5xl lg:text-6xl">
+          <h1 className="gsap-hero-title mt-5 max-w-[280px] text-balance text-4xl sm:max-w-xl font-black leading-[1.04] tracking-[-0.065em] text-[#101249] sm:text-5xl lg:text-6xl">
             Affordable Healthcare for <span className="bg-gradient-to-r from-[#7038d1] to-[#e7354c] bg-clip-text text-transparent">Every Indian Family</span>
           </h1>
-          <p className="gsap-hero-copy mt-5 max-w-xl text-base font-medium leading-8 text-[#4e5674] sm:text-lg">
+          <p className="gsap-hero-copy mt-5 max-w-[310px] text-base font-medium sm:max-w-xl leading-8 text-[#4e5674] sm:text-lg">
             Astikan Health makes it easier and affordable for families to access trusted healthcare. Book doctor consultations, lab tests, health checkups, surgeries and more — all in one place.
           </p>
           <div className="mt-7 grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -197,8 +198,8 @@ function HomeHero() {
           </div>
         </div>
 
-        <div className="relative z-0 mx-auto flex w-full max-w-[440px] items-end justify-center md:max-w-[520px]" data-aos="zoom-in" data-aos-delay="120">
-          <Image src="/home/doctor-hero.png" alt="Astikan doctor consultation support" width={900} height={1100} priority className="mx-auto h-[360px] w-full object-contain object-bottom drop-shadow-[0_28px_50px_rgba(123,43,189,0.08)] sm:h-[430px] lg:h-[520px]" />
+        <div className="relative z-0 mx-auto hidden w-full max-w-[440px] items-end justify-center md:flex md:max-w-[520px]" data-aos="zoom-in" data-aos-delay="120">
+          <Image src="/home/hero-doctor-approved.png" alt="Astikan doctor consultation support" width={462} height={596} priority className="mx-auto h-[360px] w-full object-contain object-bottom drop-shadow-[0_28px_50px_rgba(123,43,189,0.08)] sm:h-[430px] lg:h-[520px]" />
         </div>
 
         <div className="relative z-10 md:col-span-2 lg:col-span-1" data-aos="fade-left" data-aos-delay="200">
@@ -214,7 +215,7 @@ function Services() {
     <section id="services" className="bg-white py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading title="Our Healthcare Services" sub="Comprehensive healthcare solutions for you and your family" />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           {services.map((service, index) => (
             <a key={service.title} href={service.href} className="gsap-reveal group rounded-[1.45rem] border border-[#171550]/10 bg-white p-6 shadow-[0_18px_55px_rgba(11,29,92,0.045)] transition duration-300 hover:-translate-y-1 hover:border-[#7b2bbd]/25 hover:shadow-[0_24px_70px_rgba(123,43,189,0.11)]" data-aos="fade-up" data-aos-delay={index * 45}>
               <IconBubble icon={service.icon} tone={service.tone} className="h-14 w-14 text-2xl transition group-hover:scale-110" />
@@ -234,7 +235,7 @@ function ConsultationStrip() {
     <section className="bg-white py-2 sm:py-4">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-6 overflow-hidden rounded-[1.8rem] bg-[#f9f4ff] p-5 sm:grid-cols-[0.38fr_1fr_auto] sm:p-7" data-aos="fade-up">
-          <Image src="/home/consultation.png" alt="Online doctor consultation illustration" width={520} height={420} className="h-36 w-full rounded-2xl object-cover sm:h-44" />
+          <Image src="/home/consultation-approved.png" alt="Online doctor consultation illustration" width={520} height={420} className="h-36 w-full rounded-2xl object-contain object-left sm:h-44" />
           <div>
             <h2 className="text-2xl font-black tracking-[-0.04em] text-[#101249]">Online Doctor Consultation & Patient Support</h2>
             <p className="mt-2 max-w-2xl text-sm font-medium leading-7 text-[#606783] sm:text-base">Connect with experienced doctors from the comfort of your home. Get medical advice, prescriptions and follow-up support online.</p>
@@ -256,7 +257,7 @@ function EmergencyStrip() {
     <section className="bg-white py-5 sm:py-7">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-5 rounded-[1.8rem] bg-gradient-to-r from-[#fff6f8] to-[#fff0f3] p-5 sm:grid-cols-[0.2fr_1fr_0.35fr] lg:p-6" data-aos="fade-up">
-          <Image src="/home/emergency.png" alt="Emergency support siren" width={380} height={360} className="h-24 w-full rounded-2xl object-cover sm:h-28" />
+          <Image src="/home/emergency-siren-approved.png" alt="Emergency support siren" width={380} height={360} className="h-24 w-full rounded-2xl object-contain object-left sm:h-28" />
           <div>
             <h2 className="flex items-center gap-3 text-2xl font-black tracking-[-0.04em] text-[#7f1d2d]"><FaAmbulance className="text-[#e7354c]" /> Emergency Healthcare Support – 24/7</h2>
             <p className="mt-2 text-sm font-medium leading-7 text-[#6b4950] sm:text-base">We are available 24/7 to assist you in medical emergencies with hospital admission, ICU coordination and urgent care needs. Call our helpline anytime.</p>
@@ -273,7 +274,7 @@ function Treatments() {
     <section className="bg-white py-10 sm:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading title="Specialized Healthcare Treatments" sub="Advanced care for critical and specialized health conditions" />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {treatments.map((item, index) => (
             <a key={item.title} href={item.href} className="gsap-reveal group rounded-[1.5rem] border border-[#171550]/10 bg-white p-6 text-center shadow-[0_18px_55px_rgba(11,29,92,0.045)] transition hover:-translate-y-1 hover:border-[#e7354c]/25" data-aos="fade-up" data-aos-delay={index * 50}>
               <IconBubble icon={item.icon} tone={item.tone} className="mx-auto h-16 w-16 text-3xl transition group-hover:scale-110" />
@@ -293,7 +294,7 @@ function HowItWorks() {
     <section className="bg-white py-8 sm:py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading title="How Astikan Health Works" sub="Simple steps to better healthcare" />
-        <div className="relative grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="relative grid grid-cols-2 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, index) => (
             <div key={step.title} className="gsap-reveal relative rounded-[1.5rem] border border-[#171550]/10 bg-white p-6 text-center shadow-[0_18px_55px_rgba(11,29,92,0.04)]" data-aos="fade-up" data-aos-delay={index * 70}>
               {index < steps.length - 1 ? <span className="absolute left-[76%] top-12 hidden h-px w-[48%] border-t border-dashed border-[#b5b9d1] lg:block" /> : null}
@@ -326,7 +327,7 @@ function TrustNetwork() {
         <div className="rounded-[1.5rem] border border-[#171550]/10 bg-white p-7 text-center shadow-[0_18px_55px_rgba(11,29,92,0.04)]" data-aos="fade-up" data-aos-delay="80">
           <h3 className="flex items-center justify-center gap-2 text-base font-black text-[#101249]"><FaHospital className="text-[#7b2bbd]" /> Our Trusted Hospital Partners</h3>
           <div className="mt-7 overflow-hidden rounded-2xl border border-[#171550]/10 bg-white p-3">
-            <Image src="/home/partners-strip.png" alt="Apollo, Max Healthcare, Fortis and Metro hospital partners" width={900} height={280} className="mx-auto h-auto w-full object-contain" />
+            <Image src="/home/partners-approved.png" alt="Apollo, Max Healthcare, Fortis and Metro hospital partners" width={900} height={280} className="mx-auto h-auto w-full object-contain" />
           </div>
           <a href="/hospital-partners" className="mt-6 inline-flex items-center gap-2 rounded-xl border border-[#7b2bbd]/25 px-6 py-3 text-sm font-black text-[#7b2bbd]">View All Partners <FaArrowRight className="text-xs" /></a>
         </div>
@@ -372,7 +373,7 @@ function FAQAndHelp() {
                 <span className="flex items-center gap-3"><FaWhatsapp className="text-[#13a760]" /> 24/7 Customer Support</span>
               </div>
             </div>
-            <Image src="/home/support-agent.png" alt="Astikan support agent" width={420} height={640} className="ml-auto h-56 w-full rounded-2xl object-contain object-bottom" />
+            <Image src="/home/support_person_clean.png" alt="Astikan support agent" width={420} height={640} className="ml-auto h-56 w-full rounded-2xl object-contain object-bottom" />
           </div>
         </div>
       </div>
